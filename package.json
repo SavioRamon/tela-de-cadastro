@@ -1,0 +1,23 @@
+{
+  "name": "arquivos",
+  "version": "1.0.0",
+  "description": "tela de login feita com html e css(sass) com validação de campos com javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SavioRamon/tela-de-login.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SavioRamon/tela-de-login/issues"
+  },
+  "homepage": "https://github.com/SavioRamon/tela-de-login#readme",
+  "devDependencies": {
+    "sass": "^1.34.1"
+  }
+}
