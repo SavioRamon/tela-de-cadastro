@@ -4,7 +4,8 @@
   "description": "tela de login feita com html e css(sass) com validação de campos com javascript",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "webpack server --hot --mode development",
+    "build": "webpack --mode production"
   },
   "repository": {
     "type": "git",
