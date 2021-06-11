@@ -1,22 +1,56 @@
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@mixin flexBox($align: center, $justify: center, $direction: column) {
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+    flex-direction: $direction;
+}
+
+@mixin inputEstilo {
+    outline: 0;
+    border: none;
+    border-bottom: 2px solid rgb(150, 150, 150);
+    box-shadow: none;
+    font-size: 20px;
+    line-height: 40px;
+    text-indent: 10px;
 }
 
 #app {
     width: 100%;
     height: 100vh;
     background-color: rgb(214, 244, 255);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
+    @include flexBox();
+
     #formulario-login {
         width: 400px;
         height: 500px;
         background-color: white;
         border-radius: 10px;
+        @include flexBox();
+        
+
+        div {
+            width: 80%;
+
+            input {
+                @include inputEstilo();
+                width: 100%;
+                margin-bottom: 25px;
+            }
+        }
+
+        #enviar {
+            width: 80%;
+            background-color: rgb(96, 255, 194);
+            border: none;
+            padding: 10px;
+            border-radius: 50px;
+            &:hover {
+                cursor: pointer;
+                background-color: rgb(110, 247, 194);
+            }
+        }
+        
     }
 }
