@@ -30,7 +30,7 @@
         @include flexBox();
         
 
-        div {
+        .login-divisao {
             width: 80%;
 
             input {
@@ -51,6 +51,21 @@
                 background-color: rgb(110, 247, 194);
             }
         }
+
+        .senha-email-recuperar {
+            margin-top: 30px;
+            input {
+                border: none;
+                background: none;
+                &:hover {
+                    cursor: pointer;
+                    color: red;
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        
         
     }
 }
