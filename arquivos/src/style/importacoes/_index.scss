@@ -22,7 +22,7 @@
     background-color: rgb(214, 244, 255);
     @include flexBox();
 
-    #formulario-login {
+    #formulario-cadastro {
         width: 400px;
         height: 500px;
         background-color: white;
@@ -30,7 +30,7 @@
         @include flexBox();
         
 
-        .login-divisao {
+        .cadastro-divisao {
             width: 80%;
 
             input {
