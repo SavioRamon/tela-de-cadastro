@@ -7,28 +7,30 @@
     <title>tela de login</title>
 </head>
 <body>
-    <div id="app">
+    <div id="main">
         
         <form id="formulario-cadastro" action="" method="POST">
+            <h1 class="formulario-titulo">Cadastre-se</h1>
             
             <div class="cadastro-divisao">
-                <input type="text" name="nome" id="nome" placeholder="Nome">
+                <input type="text" name="nome" class="input-cadastro" placeholder="Nome">
             </div>
 
             <div class="cadastro-divisao">
-                <input type="email" name="email" id="email" placeholder="Email"> 
+                <input type="email" name="email" class="input-cadastro" placeholder="Email"> 
             </div>
 
             <div class="cadastro-divisao">
-                <input type="password" name="senha" id="senha" placeholder="Senha">
+                <input type="password" name="senha" class="input-cadastro" placeholder="Senha">
             </div>
             
-            <input type="submit" value="ENTRAR" id="enviar">
+            <div class="formulario-operacao">
 
-            <div class="senha-email-recuperar">
-                <input type="button" class="recuperacao" value="esqueci meu E-mail"> /
-                <input type="button" class="recuperacao" value="senha">
+                <input type="submit" value="Criar conta" class="criar">
+                <input type="button" value="Fazer Login" class="logar">
+
             </div>
+            
         </form>
 
     </div>
