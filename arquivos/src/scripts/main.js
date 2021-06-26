@@ -5,14 +5,10 @@ import "../style/main.scss";
 
 function validando(){
 
+    limpaErro();
     
-    
-    const inputs = document.querySelector("#formulario-cadastro").querySelectorAll("input");
-    const inputsFiltrados = [...inputs].filter(input => input.getAttribute("type") !== "button");
-    
-    limpaErro(inputsFiltrados);
-
-    for(let input of inputsFiltrados) {
+    inputsCadastro = document.querySelectorAll(".input-cadastro");
+    for(let input of inputsCadastro) {
 
         let analise = analisaInput(input);
         if(analise) {
@@ -66,6 +62,8 @@ function analisaInput(input) {
 }
 
 function mostraErro(input, erro) {
+    // exibe uma mensagem de erro logo abaixo de um input de cadastro
+
 
     input.style.border = "none"
     input.style.boxShadow = "0px 0px 2px red"
@@ -80,12 +78,13 @@ function mostraErro(input, erro) {
 
 function limpaErro() {
 
+    // apaga todos os estilos anteriormente adicionados
     let inputs = document.querySelectorAll(".input-cadastro");
     for(let input of inputs) {
         input.style = "";
     }
     
-
+    // apaga todas as mensagens de erro
     let erroMensagens = document.querySelectorAll(".erro");
     for(let erro of erroMensagens) {
         erro.remove();
