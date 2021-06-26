@@ -10,11 +10,14 @@ function validando(){
     const inputs = document.querySelector("#formulario-cadastro").querySelectorAll("input");
     const inputsFiltrados = [...inputs].filter(input => input.getAttribute("type") !== "button");
     
-
+    limpaErro(inputsFiltrados);
 
     for(let input of inputsFiltrados) {
+
         let analise = analisaInput(input);
-        console.log(analise);
+        if(analise) {
+            mostraErro(input, analise);
+        }
     }
     return;
 
@@ -22,6 +25,7 @@ function validando(){
 
     formulario.submit();
 }
+
 
 
 function analisaInput(input) {
@@ -58,6 +62,33 @@ function analisaInput(input) {
             }
             
         break;
+    }
+}
+
+function mostraErro(input, erro) {
+
+    input.style.border = "none"
+    input.style.boxShadow = "0px 0px 2px red"
+    
+    const erroMensagem = document.createElement("div");
+    erroMensagem.setAttribute("class", "erro");
+    erroMensagem.innerHTML = erro;
+
+    input.parentElement.insertBefore(erroMensagem, input.ElementSibling);
+}
+
+
+function limpaErro() {
+
+    let inputs = document.querySelectorAll(".input-cadastro");
+    for(let input of inputs) {
+        input.style = "";
+    }
+    
+
+    let erroMensagens = document.querySelectorAll(".erro");
+    for(let erro of erroMensagens) {
+        erro.remove();
     }
 }
 
