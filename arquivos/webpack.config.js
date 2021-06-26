@@ -40,6 +40,11 @@ module.exports = {
             filename: "index.html",
             template: "./src/index.html",
         }),
+        new HtmlWebpackPlugin({
+            filename: "entrar.html",
+            template: "./src/entrar.html",
+        }),
+
         new MiniCssExtractPlugin()
     ]
 }
