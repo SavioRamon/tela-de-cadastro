@@ -39,15 +39,21 @@ $larguraBlocosFormulario: 90%;
 
         .cadastro-divisao {
             width: $larguraBlocosFormulario;
-
+            margin-bottom: 30px; 
+            
             .input-cadastro {
                 @include inputEstilo();
                 width: 100%;
-                margin-bottom: 25px; 
                 transition: all ease 0.1s;
                 &:focus {
                     box-shadow: 0px 0px 10px rgb(121, 255, 204);
                 }
+            }
+
+            .erro {
+                color: #ff0000;
+                font-size: 13px;
+                position: absolute;
             }
   
         }
