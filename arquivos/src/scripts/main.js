@@ -7,19 +7,23 @@ function validando(){
 
     limpaErro();
     
+    const formulario = document.querySelector("#formulario-cadastro");
     const inputsCadastro = document.querySelectorAll(".input-cadastro");
+    
+    let enviar = true;
+    
     for(let input of inputsCadastro) {
 
         let analise = analisaInput(input);
         if(analise) {
             mostraErro(input, analise);
-        }
+            enviar = false;
+        } 
     }
-    return;
-
-
-
-    formulario.submit();
+    
+    if(enviar === true) {
+        formulario.submit();
+    }
 }
 
 
@@ -64,13 +68,15 @@ function analisaInput(input) {
 function mostraErro(input, erro) {
     // exibe uma mensagem de erro logo abaixo de um input de cadastro
 
-
     input.style.border = "none"
     input.style.boxShadow = "0px 0px 2px red"
     
     const erroMensagem = document.createElement("div");
     erroMensagem.setAttribute("class", "erro");
-    erroMensagem.innerHTML = erro;
+
+    const simboloErro = "&#10008;";
+
+    erroMensagem.innerHTML = `${simboloErro} ${erro}`;
 
     input.parentElement.insertBefore(erroMensagem, input.ElementSibling);
 }
@@ -93,4 +99,4 @@ function limpaErro() {
 
 
 const enviar = document.querySelector(".criar");
-enviar.onclick = ()=>validando();
+enviar.onclick = () => validando();
