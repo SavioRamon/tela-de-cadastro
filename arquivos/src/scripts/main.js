@@ -7,7 +7,7 @@ function validando(){
 
     limpaErro();
     
-    inputsCadastro = document.querySelectorAll(".input-cadastro");
+    const inputsCadastro = document.querySelectorAll(".input-cadastro");
     for(let input of inputsCadastro) {
 
         let analise = analisaInput(input);
