@@ -99,4 +99,4 @@ function limpaErro() {
 
 
 const enviar = document.querySelector(".criar");
-enviar.onclick = () => validando();
+enviar? enviar.onclick = () => validando(): "";
