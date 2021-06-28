@@ -46,7 +46,15 @@ module.exports = {
         }),
 
         new MiniCssExtractPlugin()
-    ]
+    ],
+    
+    devServer: {
+        setup(app) {
+            app.post('*', (req, res) => {
+                res.redirect(req.originalUrl);
+            });
+        },
+    }
 }
 
 
